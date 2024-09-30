@@ -9,7 +9,6 @@ class Solution(object):
         while i < len(prices):
             if prices[i] > prices[i-1]:
                 profit += (prices[i]-prices[i-1])
-                print(profit)
             i += 1
         return profit
     
