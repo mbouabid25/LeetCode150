@@ -1,0 +1,59 @@
+""" You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, 
+and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+The final sorted array should not be returned by the function, but instead be stored inside the array nums1.
+To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged,
+and the last n elements are set to 0 and should be ignored. nums2 has a length of n. """
+
+
+class Solution(object):
+    def merge(self, nums1, m, nums2, n):
+        """
+        :type nums1: List[int]
+        :type m: int
+        :type nums2: List[int]
+        :type n: int
+        :rtype: None Do not return anything, modify nums1 in-place instead.
+        """
+
+        point1 = m-1
+        point2 = n-1
+        i = n+m-1
+
+        while point1 >=0 and point2 >= 0:
+            if nums1[point1] > nums2[point2] :
+                nums1[i] = nums1[point1]
+                point1 -= 1
+            else : 
+                nums1[i] = nums2[point2]
+                point2 -=1
+            i -= 1
+        while point2 >= 0 : 
+            nums1[i] = nums2[point2]
+            point2 -= 1
+            i -= 1
+            
+        return nums1
+    
+
+""" Since nums1 has space at the end, we can take advantage of this and avoid shifting elements multiple
+times by merging the arrays from the back to the front. This will help avoid overwriting values in
+nums1 that haven't been processed yet.
+
+We will use three pointers:
+
+p1: points to the last valid element in nums1 (i.e., m-1).
+p2: points to the last element in nums2 (i.e., n-1).
+p: points to the last position in nums1 (i.e., m + n - 1), where the largest element will go during the merge process.
+Algorithm:
+Start from the end of both arrays, comparing elements from nums1 and nums2.
+Place the larger of the two elements at the end of nums1 (i.e., at position p), 
+and move the corresponding pointer (p1 or p2) one step back.
+Repeat this process until one of the arrays is exhausted.
+If there are remaining elements in nums2, copy them into nums1. 
+(No need to handle the remaining elements in nums1 because they are already in the correct place.)
+Time Complexity:
+This approach works in O(m+n), as each element is processed once.
+Space Complexity: 
+O(1) because we are doing the merging in-place.
+ """
