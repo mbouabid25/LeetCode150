@@ -29,6 +29,7 @@ Leetcode150/
 
 ## How to Use
 Feel free to browse through the problems and review the solutions. Each problem is solved with detailed explanations and comments, so it's easy to follow and understand.
+You can run each file from your terminal to see the examples in action!
 
 - **Clone the repository**: 
 git clone https://github.com/mbouabid25/LeetCode150.git
