@@ -31,7 +31,7 @@ Leetcode150/
 Feel free to browse through the problems and review the solutions. Each problem is solved with detailed explanations and comments, so it's easy to follow and understand.
 
 - **Clone the repository**: 
-git clone https://github.com/yourusername/leetcode150-solutions.git
+git clone https://github.com/mbouabid25/LeetCode150.git
 
 - **Navigate the folders** to find the problem and solution you're interested in.
 
