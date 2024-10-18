@@ -1,4 +1,4 @@
-# Leetcode 150 Solutions
+##NOTE : I WILL BE TAKING A BREAK IN OCTOBER AND NOVEMBER TO STUDY FOR THE GRE. I WILL BE UPLOADING 2-3 TIMES A WEEK INSTEAD OF EVERY WEEK##   # Leetcode 150 Solutions
 
 Welcome to my GitHub repository where I track my solutions to the **Leetcode Top 150 Interview Questions**! 🧠💻
 
